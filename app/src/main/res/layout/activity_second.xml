@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Route step-by-step"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRouteList"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvFullPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Total price:" />
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Total time:" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

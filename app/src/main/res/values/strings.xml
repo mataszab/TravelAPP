@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TravelApp</string>
+    
+    <string-array name="startingPoint">
+        <item>Lithuania, Kaunas, Muitinės g. 8</item>
+        <item>USA, New York, Battery Park Underpass (Statue of Liberty View Point)</item>
+        <item>Australia, Sydney, Bennelong Point (Sydney Opera House)</item>
+    </string-array>
+    
+    <string-array name="spinnerSelection">
+        <item>Cheapest</item>
+        <item>Quickest</item>
+    </string-array>
+
+    <string name="btn_options"><u>Options</u></string>
+</resources>
