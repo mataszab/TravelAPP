@@ -2,19 +2,28 @@ package com.example.travelapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -28,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton imgButtPubTrans;
     ImageButton imgButtWalk;
     ImageButton imgButtPlane;
+
+    EditText edDepartDate;
+    EditText edReturnDate;
 
     AutoCompleteTextView actvFrom;
     AutoCompleteTextView actvTo;
@@ -50,6 +62,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgButtWalk = findViewById(R.id.imgButtWalk);
         imgButtPlane = findViewById(R.id.imgButtPlane);
 
+        edDepartDate = findViewById(R.id.edDepartDate);
+        edReturnDate = findViewById(R.id.edReturnDate);
+
+        edDepartDate.setInputType(InputType.TYPE_NULL);
+        edReturnDate.setInputType(InputType.TYPE_NULL);
+
+        edDepartDate.setSingleLine(false);
+        edReturnDate.setSingleLine(false);
+
         imgButtRecomm.setOnClickListener(this);
         imgButtCar.setOnClickListener(this);
         imgButtPubTrans.setOnClickListener(this);
@@ -66,6 +87,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.startingPoint));
         actvFrom.setAdapter(adapter);
         actvTo.setAdapter(adapter);
+
+        edDepartDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDateTimeDialog(edDepartDate);
+            }
+        });
+
+        edReturnDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDateTimeDialog(edReturnDate);
+            }
+        });
     }
 
     @Override
@@ -109,6 +144,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
+    }
+
+    public void showDateTimeDialog(final EditText dateTimeIn) {
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR, year);
+                calendar.set(Calendar.MONTH, month);
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                        calendar.set(Calendar.MINUTE,minute);
+
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd\nHH:mm");
+
+                        dateTimeIn.setText(simpleDateFormat.format(calendar.getTime()));
+                    }
+                };
+
+                new TimePickerDialog(MainActivity.this, timeSetListener, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false).show();
+            }
+        };
+        new DatePickerDialog(MainActivity.this, dateSetListener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
     public void openActivity2() {

@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/actvFrom"
         app:layout_constraintEnd_toStartOf="@+id/imgButtCar"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504"
+        app:layout_constraintVertical_bias="0.841"
         app:tint="#3C3C3C" />
 
     <ImageButton
@@ -32,7 +32,7 @@
         app:layout_constraintBottom_toTopOf="@+id/actvFrom"
         app:layout_constraintEnd_toStartOf="@+id/imgButtPubTrans"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504"
+        app:layout_constraintVertical_bias="0.841"
         app:tint="#3C3C3C" />
 
     <ImageButton
@@ -46,7 +46,7 @@
         app:layout_constraintBottom_toTopOf="@+id/actvFrom"
         app:layout_constraintEnd_toStartOf="@+id/imgButtWalk"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504"
+        app:layout_constraintVertical_bias="0.841"
         app:tint="#3C3C3C" />
 
     <ImageButton
@@ -60,7 +60,7 @@
         app:layout_constraintBottom_toTopOf="@+id/actvFrom"
         app:layout_constraintEnd_toStartOf="@+id/imgButtPlane"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504"
+        app:layout_constraintVertical_bias="0.841"
         app:tint="#3C3C3C" />
 
     <ImageButton
@@ -74,13 +74,14 @@
         app:layout_constraintBottom_toTopOf="@+id/actvFrom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504"
+        app:layout_constraintVertical_bias="0.841"
         app:tint="#3C3C3C" />
 
     <AutoCompleteTextView
         android:id="@+id/actvFrom"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:hint="Select a starting point..."
@@ -89,10 +90,7 @@
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/actvTo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <AutoCompleteTextView
         android:id="@+id/actvTo"
@@ -108,13 +106,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <Button
         android:id="@+id/btnMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="24dp"
         android:onClick="calculateRoute"
         android:text="Start!"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,16 +122,17 @@
 
     <Spinner
         android:id="@+id/spinMain"
-        android:layout_width="152dp"
+        android:layout_width="120dp"
         android:layout_height="36dp"
         android:gravity="center"
         android:textSize="17dp"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
         app:layout_constraintBottom_toTopOf="@+id/btnMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actvTo"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.645" />
 
     <TextView
         android:id="@+id/textView"
@@ -147,39 +146,80 @@
         android:textSize="17dp"
         app:layout_constraintBottom_toTopOf="@+id/spinMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actvTo"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:scaleX="1.1"
         android:scaleY="1.1"
+        android:theme="@style/SCBSwitch"
         app:layout_constraintBottom_toTopOf="@+id/btnMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toEndOf="@+id/spinMain"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintTop_toBottomOf="@+id/actvTo"
+        app:layout_constraintVertical_bias="0.645"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="160dp"
         android:layout_height="69dp"
-        android:layout_marginTop="36dp"
         android:gravity="center"
         android:lines="2"
         android:padding="10dp"
         android:text="Do you need accommodation?"
         android:textColor="@color/black"
         android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/actvTo" />
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edDepartDate"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/textview_border"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:hint="Departure on: Date"
+        android:inputType="none"
+        android:lines="2"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actvTo"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <EditText
+        android:id="@+id/edReturnDate"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="56dp"
+        android:background="@drawable/textview_border"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:hint="Return on: Date"
+        android:inputType="none"
+        android:lines="2"
+        android:minLines="2"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/edDepartDate"
+        app:layout_constraintTop_toBottomOf="@+id/actvTo"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="288dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/imgButtPubTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
