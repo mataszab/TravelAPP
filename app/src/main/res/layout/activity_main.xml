@@ -9,15 +9,15 @@
 
     <ImageButton
         android:id="@+id/imgBtnSave"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
         android:background="@null"
         android:onClick="onMoreClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_more_vert" />
+        app:srcCompat="@drawable/ic_baseline_account_circle" />
 
     <ImageButton
         android:id="@+id/imgButtRecomm"

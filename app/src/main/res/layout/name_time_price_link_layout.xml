@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/name_time_price_link_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -40,7 +38,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="ID." />
 
         <TextView
@@ -49,10 +47,9 @@
             android:layout_height="match_parent"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="TextView" />
     </LinearLayout>
 
@@ -72,7 +69,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="Time:" />
 
         <TextView
@@ -81,10 +78,9 @@
             android:layout_height="match_parent"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="TextView" />
     </LinearLayout>
 
@@ -104,7 +100,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="Price:" />
 
         <TextView
@@ -113,10 +109,9 @@
             android:layout_height="match_parent"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="TextView" />
     </LinearLayout>
 
@@ -127,18 +122,6 @@
         android:layout_weight="1"
         android:background="@color/aliceBlue">
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView8"-->
-<!--            android:layout_width="65dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:paddingTop="10dp"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            android:paddingLeft="10dp"-->
-<!--            android:paddingRight="10dp"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="16dp"-->
-<!--            android:text="Link:" />-->
-
         <TextView
             android:id="@+id/tvLink1"
             android:layout_width="match_parent"
@@ -147,8 +130,10 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:gravity="center"
+            android:textColorLink="@color/blue"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="17sp"
             android:text="TextView" />
     </LinearLayout>
 
