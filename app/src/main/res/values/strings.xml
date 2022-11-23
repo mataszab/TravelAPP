@@ -12,5 +12,22 @@
         <item>Quickest</item>
     </string-array>
 
+    <string-array name="propertyType">
+        <item>Apartments</item>
+        <item>Hotels</item>
+        <item>Hostels</item>
+        <item>Guest houses</item>
+        <item>Bed and breakfast</item>
+        <item>Villas</item>
+        <item>Motels</item>
+    </string-array>
+
+    <string-array name="sortBy">
+        <item>Best Reviewed</item>
+        <item>Cheapest</item>
+        <item>Highest Stars</item>
+        <item>Cheapest &amp; Best Reviewed</item>
+    </string-array>
+
     <string name="btn_options"><u>Options</u></string>
 </resources>

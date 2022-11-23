@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelApp"
         tools:targetApi="31">
+        <activity android:name=".AccommodationActivity"></activity>
         <activity
             android:name=".SecondActivity"
             android:windowSoftInputMode="stateHidden|adjustPan"

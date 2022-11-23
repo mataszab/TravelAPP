@@ -4,38 +4,57 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
+    TextView tvTotalTime;
+    TextView tvFullPrice;
+
+    ArrayList list = new ArrayList();
+    String totalTime;
+    String totalPrice;
+
+    Bundle bundle;
+    RecyclerView recyclerView;
+    Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Bundle bundle = getIntent().getExtras();
-        ArrayList<Route> routeList = bundle.getParcelableArrayList("routeList");
-        String totalTime = bundle.getString("totalTime");
-        String totalPrice = bundle.getString("totalPrice");
+        tvTotalTime = findViewById(R.id.tvTotalTime);
+        tvFullPrice = findViewById(R.id.tvFullPrice);
 
-        TextView tvTotalTime = findViewById(R.id.tvTotalTime);
-        TextView tvFullPrice = findViewById(R.id.tvFullPrice);
+        bundle = getIntent().getExtras();
+        list = bundle.getParcelableArrayList("list");
+        totalTime = bundle.getString("totalTime");
+        totalPrice = bundle.getString("totalPrice");
 
         tvTotalTime.setText(totalTime);
         tvFullPrice.setText(totalPrice);
 
         recyclerView = findViewById(R.id.recyclerRouteList);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new RecycleViewAdapter(routeList, this);
-        recyclerView.setAdapter(mAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        adapter = new Adapter(this, list);
+        recyclerView.setAdapter(adapter);
+    }
+
+    public void onGoBackClick(View view) {
+        finish();
+    }
+    public void onSaveClick(View view) {
+        finish();
     }
 }

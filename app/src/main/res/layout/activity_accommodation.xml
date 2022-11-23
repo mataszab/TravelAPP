@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/teal_200"
+    android:layout_height="match_parent"
+    tools:context=".AccommodationActivity">
+
+    <TextView
+        android:id="@+id/tvSortBy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Choose your preference:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spPropertyType" />
+
+    <Spinner
+        android:id="@+id/spSortBy"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:background="@drawable/spinner_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSortBy" />
+
+    <EditText
+        android:id="@+id/edCheckIn"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_border"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:hint="Check-in"
+        android:inputType="none"
+        android:lines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRooms" />
+
+    <EditText
+        android:id="@+id/edCheckOut"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_border"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:hint="Check-out"
+        android:inputType="none"
+        android:lines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toEndOf="@+id/edCheckIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvRoomsCount" />
+
+    <TextView
+        android:id="@+id/tvAdults"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:gravity="left|center"
+        android:text="Adults"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinusAdults"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvChildren"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:gravity="left|center"
+        android:text="Children"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinusChildren"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdults" />
+
+    <TextView
+        android:id="@+id/tvRooms"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:gravity="left|center"
+        android:text="Rooms"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinusRooms"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChildren" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddAdults"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/lighter_teal_200"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddChildren"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/lighter_teal_200"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAdults" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddRooms"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/lighter_teal_200"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddChildren" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMinusAdults"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/lighter_teal_200"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/tvAdultsCount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMinusChildren"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/lighter_teal_200"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/tvChildrenCount"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinusAdults" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMinusRooms"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:backgroundTint="@color/lighter_teal_200"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/tvRoomsCount"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinusChildren" />
+
+    <TextView
+        android:id="@+id/tvAdultsCount"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddAdults"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvChildrenCount"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddChildren"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdultsCount" />
+
+    <TextView
+        android:id="@+id/tvRoomsCount"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddRooms"
+        app:layout_constraintTop_toBottomOf="@+id/tvChildrenCount" />
+
+    <Spinner
+        android:id="@+id/spPropertyType"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:background="@drawable/spinner_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Property type:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edCheckOut" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="271dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="Choose accommodation!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMinusAdults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button7"
+        android:layout_width="97dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/save_button_style"
+        android:text="Save"
+        android:onClick="onSaveClick"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSortBy" />
+
+    <ImageButton
+        android:id="@+id/imgBtnArrow"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/teal_200"
+        android:onClick="onGoBackClick"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
