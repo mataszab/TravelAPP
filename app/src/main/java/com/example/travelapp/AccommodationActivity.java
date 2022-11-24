@@ -35,8 +35,6 @@ public class AccommodationActivity extends AppCompatActivity implements View.OnC
     Spinner spPropertyType;
     Spinner spSortBy;
 
-    ImageButton imgBtnArrow;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

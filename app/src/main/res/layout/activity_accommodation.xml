@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/teal_200"
+    android:background="#7bc8e5"
     android:layout_height="match_parent"
     tools:context=".AccommodationActivity">
 
@@ -109,7 +109,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="60dp"
-        android:backgroundTint="@color/lighter_teal_200"
+        android:backgroundTint="#E2F2F8"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +119,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="60dp"
-        android:backgroundTint="@color/lighter_teal_200"
+        android:backgroundTint="#E2F2F8"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAddAdults" />
@@ -129,7 +129,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="60dp"
-        android:backgroundTint="@color/lighter_teal_200"
+        android:backgroundTint="#E2F2F8"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAddChildren" />
@@ -139,7 +139,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="68dp"
-        android:backgroundTint="@color/lighter_teal_200"
+        android:backgroundTint="#E2F2F8"
         android:text="-"
         app:layout_constraintEnd_toStartOf="@+id/tvAdultsCount"
         app:layout_constraintTop_toTopOf="parent" />
@@ -148,7 +148,7 @@
         android:id="@+id/btnMinusChildren"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:backgroundTint="@color/lighter_teal_200"
+        android:backgroundTint="#E2F2F8"
         android:text="-"
         app:layout_constraintEnd_toStartOf="@+id/tvChildrenCount"
         app:layout_constraintTop_toBottomOf="@+id/btnMinusAdults" />
@@ -158,7 +158,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
 
-        android:backgroundTint="@color/lighter_teal_200"
+        android:backgroundTint="#E2F2F8"
         android:text="-"
         app:layout_constraintEnd_toStartOf="@+id/tvRoomsCount"
         app:layout_constraintTop_toBottomOf="@+id/btnMinusChildren" />
@@ -256,7 +256,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginTop="16dp"
-        android:background="@color/teal_200"
+        android:background="#7bc8e5"
         android:onClick="onGoBackClick"
         app:layout_constraintEnd_toStartOf="@+id/textView15"
         app:layout_constraintHorizontal_bias="0.347"

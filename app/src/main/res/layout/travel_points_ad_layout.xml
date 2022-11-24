@@ -29,7 +29,7 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:weightSum="30"
-        android:background="@color/aliceBlue">
+        android:background="#E2F2F8">
 
         <ImageView
             android:id="@+id/imgViewStar"

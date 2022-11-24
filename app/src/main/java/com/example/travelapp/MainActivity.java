@@ -127,39 +127,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view    .getId()) {
             case R.id.imgButtRecomm:
-                imgButtRecomm.setBackgroundResource(R.drawable.always_clicked);
-                imgButtCar.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_style);
-                imgButtWalk.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPlane.setBackgroundResource(R.drawable.image_button_style);
+                imgButtRecomm.setBackgroundResource(R.drawable.image_button_clicked_background);
+                imgButtCar.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtWalk.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPlane.setBackgroundResource(R.drawable.image_button_static_background);
                 break;
             case R.id.imgButtCar:
-                imgButtRecomm.setBackgroundResource(R.drawable.image_button_style);
-                imgButtCar.setBackgroundResource(R.drawable.always_clicked);
-                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_style);
-                imgButtWalk.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPlane.setBackgroundResource(R.drawable.image_button_style);
+                imgButtRecomm.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtCar.setBackgroundResource(R.drawable.image_button_clicked_background);
+                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtWalk.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPlane.setBackgroundResource(R.drawable.image_button_static_background);
                 break;
             case R.id.imgButtPubTrans:
-                imgButtRecomm.setBackgroundResource(R.drawable.image_button_style);
-                imgButtCar.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPubTrans.setBackgroundResource(R.drawable.always_clicked);
-                imgButtWalk.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPlane.setBackgroundResource(R.drawable.image_button_style);
+                imgButtRecomm.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtCar.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_clicked_background);
+                imgButtWalk.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPlane.setBackgroundResource(R.drawable.image_button_static_background);
                 break;
             case R.id.imgButtWalk:
-                imgButtRecomm.setBackgroundResource(R.drawable.image_button_style);
-                imgButtCar.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_style);
-                imgButtWalk.setBackgroundResource(R.drawable.always_clicked);
-                imgButtPlane.setBackgroundResource(R.drawable.image_button_style);
+                imgButtRecomm.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtCar.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtWalk.setBackgroundResource(R.drawable.image_button_clicked_background);
+                imgButtPlane.setBackgroundResource(R.drawable.image_button_static_background);
                 break;
             case R.id.imgButtPlane:
-                imgButtRecomm.setBackgroundResource(R.drawable.image_button_style);
-                imgButtCar.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_style);
-                imgButtWalk.setBackgroundResource(R.drawable.image_button_style);
-                imgButtPlane.setBackgroundResource(R.drawable.always_clicked);
+                imgButtRecomm.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtCar.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPubTrans.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtWalk.setBackgroundResource(R.drawable.image_button_static_background);
+                imgButtPlane.setBackgroundResource(R.drawable.image_button_clicked_background);
                 break;
             default:
                 break;

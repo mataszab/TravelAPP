@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="4"
+    android:background="#E2F2F8"
     android:orientation="vertical">
 
     <LinearLayout
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_weight="1"
-        android:background="@color/aliceBlue">
+        android:background="#E2F2F8">
 
         <TextView
             android:id="@+id/tvID3"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_weight="1"
-        android:background="@color/aliceBlue">
+        android:background="#E2F2F8">
 
         <TextView
             android:id="@+id/textView5"
